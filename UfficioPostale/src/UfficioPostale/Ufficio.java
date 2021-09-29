@@ -18,7 +18,6 @@ public class Ufficio {
 		 */
 		BlockingQueue<Runnable> blkQueue = new LinkedBlockingDeque<Runnable>(); // Prima sala
 		BlockingQueue<Runnable> blkArrayK = new ArrayBlockingQueue<Runnable>(kElements); // Seconda sala
-		// Sportelli
 		
 		ExecutorService poolThread = new ThreadPoolExecutor(
 				numSportelli,
