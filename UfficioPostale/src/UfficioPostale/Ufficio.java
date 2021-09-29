@@ -14,7 +14,7 @@ public class Ufficio {
 		 * Gestire le code di attesa
 		 * Sono due 
 		 * Una coda di tipo BlockingQueue
-		 * Seconda coda di tipo Array che rapressenta la prima sala
+		 * Seconda coda di tipo Array che rapressenta la seconda sala
 		 */
 		BlockingQueue<Runnable> blkQueue = new LinkedBlockingDeque<Runnable>(); // Prima sala
 		BlockingQueue<Runnable> blkArrayK = new ArrayBlockingQueue<Runnable>(kElements); // Seconda sala
