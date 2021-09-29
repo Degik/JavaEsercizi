@@ -5,9 +5,9 @@ import java.util.*;
 
 public class Ufficio {
 	final static int numSportelli = 4;
-	final static int kElements = 10;
+	final static int kElements = 5;
 	final static int terminationTime = 5000;
-	final static int people = 15;
+	final static int people = 5000;
 	
 	public static void main(String[] args) {
 		/*
@@ -26,7 +26,8 @@ public class Ufficio {
 				terminationTime,
 				TimeUnit.MILLISECONDS,
 				blkArrayK,
-				new ThreadPoolExecutor.AbortPolicy());
+				new ThreadPoolExecutor.AbortPolicy()
+		);
 		
 		for(int i = 0; i < people; i++) {
 			Persona persona = new Persona(i);
@@ -50,13 +51,5 @@ public class Ufficio {
 			}
 		}
 		poolThread.shutdown();
-	}
-	
-	public static void sleep(int longMillis) {
-		try {
-			Thread.sleep(longMillis);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
 	}
 }
